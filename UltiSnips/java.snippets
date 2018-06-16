@@ -1,0 +1,100 @@
+priority 10
+
+snippet psvm "main method" b
+public static void main(String[] args) {
+	${0:method content}
+}
+endsnippet
+
+snippet md "general method with maximum 3 parameters" b
+${1:public }${2:static }${3:void }${4:methodName}(${5:param1,${6:param2,${7:param3}}}) {
+	${0:method content}
+}
+endsnippet
+
+snippet prmd "private method with maximum 3 parameters" b
+${1:private }${2:void }${3:methodName}(${4:param1,${5:param2,${6:param3}}}) {
+	${0:method content}
+}
+endsnippet
+
+snippet stmd "static method with maximum 3 parameters" b
+${1:static }${2:void }${3:methodName}(${4:param1,${5:param2,${6:param3}}}) {
+	${0:method content}
+}
+endsnippet
+
+snippet mlcom "multiple line comments" b
+/*
+ *${VISUAL} ${0:press enter to input more content}
+ */
+endsnippet
+
+snippet doccom "documentation comments" b
+/**
+ * ${VISUAL} ${0:press enter to input more content}
+ */
+endsnippet
+
+snippet for "for loop" b
+for (int ${1:i} = ${2:0}; $1 < ${3:count}; ${4:$1++}) {
+	${VISUAL} ${0:press enter to input more content}
+}
+endsnippet
+
+snippet ifelse "if else statements" 
+if (${1:condition}) {
+	${VISUAL}${2:press enter to input more statements}
+} ${3:else ${4:\{
+	${5:statements}
+	\}}}
+endsnippet
+
+snippet switch "switch statements" b
+switch (${1:expression}) {
+	${2:cases }
+ 	${3:default:
+		${4:statements}}
+}
+endsnippet
+
+snippet cases "case statements" b
+case: ${1:condition}
+	${2:statements}
+	break;
+${3:cases }
+endsnippet
+
+snippet while "while loop" b
+while (${1:condition}) {
+	${2:statements;}
+	${3:iteration_statement}
+}
+endsnippet
+
+snippet dowhile "do while loop" b
+do {
+	${1:statements};
+	${2:iteration statement;}
+} while (${3:condition});
+endsnippet
+
+snippet foreach "foreach loop" b
+for (${1:type} ${2:variablename} : ${3:array|collection}) {
+	${VISUAL} ${0:statements}
+}
+endsnippet
+
+snippet println "println() method" 
+System.out.println(${VISUAL}${1:content});
+endsnippet
+
+snippet try( "try block with resource" b
+try (
+		${1:resource}
+	) {
+		${VISUAL} ${2:try block statements}
+} catch (${3:Exception} ${4:e}) {
+	${5:$4.printStackTrace();}
+}	
+endsnippet
