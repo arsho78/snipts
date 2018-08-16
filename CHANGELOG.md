@@ -1,5 +1,10 @@
 # snipts changelog #
 
+## 2018-06-17 ##
+### Added ###
+- UltiSnips
+	- bold, italic, quote, code style for markdown
+
 ## 2018-06-16 ##
 ### Added ###
 - README description of this project

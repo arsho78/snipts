@@ -24,6 +24,18 @@ ${1:static }${2:void }${3:methodName}(${4:param1,${5:param2,${6:param3}}}) {
 }
 endsnippet
 
+snippet getter "getter method" b
+public ${1:String} get${2:Property}() {
+	return this.${2/\w+\s*/\l$0/};
+}
+endsnippet
+
+snippet setter "setter method" b
+public void set${1:Property}(${2:String} ${1/\w+\s*/\l$0/}) {
+	this.${1/\w+\s*/\l$0/} = ${1/\w+\s*/\l$0/};
+}
+endsnippet
+
 snippet mlcom "multiple line comments" b
 /*
  *${VISUAL} ${0:press enter to input more content}
