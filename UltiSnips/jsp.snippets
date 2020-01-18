@@ -1,0 +1,37 @@
+snippet 3.1 "JSP(servlet3.1) file template" b
+<%@ page contentType="text/html; charset=UTF-8" language="java" errorPage="${1:error.jsp}" %>
+<!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml/DTD/xhtml1-transitional.dtd">
+<html jspns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>${2:title}</title>
+</head>
+<body>
+	${0:body-content}	
+</body>
+</html>
+endsnippet
+
+snippet <> "jsp tag single line" b
+<${1:tagname}>${VISUAL}${2:content}</$1>
+endsnippet
+
+snippet </> "jsp tag with properties without content" b
+<${1:tagname}${2: property} />
+endsnippet
+
+snippet <ps> "jsp tag with properties single line" b
+<${1:tagname}${2: property}>${VISUAL}${3:content}</$1>
+endsnippet
+
+snippet "< >" "jsp tag multiple lines" b
+<${1:tagname}>
+	${VISUAL}${2:content}
+</$1>
+endsnippet
+
+snippet "<p >" "jsp tag with properties multiple lines" b
+<${1:tagname}${2: property}>
+	${VISUAL}${3:content}
+</$1>
+endsnippet

@@ -2,6 +2,10 @@ snippet <> "xml tag single line" b
 <${1:tagname}>${VISUAL}${2:content}</$1>
 endsnippet
 
+snippet </> "xml tag with property without content" b
+<${1:tagname}${2: property} />
+endsnippet
+
 snippet <ps> "xml tag with properties single line" b
 <${1:tagname}${2: property}>${VISUAL}${3:content}</$1>
 endsnippet
@@ -12,13 +16,13 @@ snippet "< >" "xml tag multiple lines" b
 </$1>
 endsnippet
 
-snippet "<ps >" "xml tag with properties multiple lines" b
+snippet "<p >" "xml tag with properties multiple lines" b
 <${1:tagname}${2: property}>
 	${VISUAL}${3:content}
 </$1>
 endsnippet
 
-snippet pom-template "template for pom file" b
+snippet pom-xml "template for pom file" b
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0

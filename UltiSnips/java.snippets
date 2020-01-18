@@ -1,8 +1,32 @@
 priority 10
 
+snippet pcl "public class" b
+public class `!p snip.rv=snip.basename` ${1:extends/implements}{
+	${0:body}
+}
+endsnippet
+
+snippet cl "class" b
+class ${1:ClassName} {
+	${0:body}
+}
+endsnippet
+
 snippet psvm "main method" b
 public static void main(String[] args) {
 	${0:method content}
+}
+endsnippet
+
+snippet pv "public void mehtod" b
+public void ${VISUAL}${1:method}(${2:}) {
+	${0}
+}
+endsnippet
+
+snippet psv "public static void mehtod" b
+public static void ${VISUAL}${1:method}(${2:}) {
+	${0}
 }
 endsnippet
 
@@ -54,6 +78,12 @@ for (int ${1:i} = ${2:0}; $1 < ${3:count}; ${4:$1++}) {
 }
 endsnippet
 
+snippet if "if statements" 
+if (${1:condition}) {
+	${VISUAL}${2:press enter to input more statements}
+} 
+endsnippet
+
 snippet ifelse "if else statements" 
 if (${1:condition}) {
 	${VISUAL}${2:press enter to input more statements}
@@ -97,8 +127,12 @@ for (${1:type} ${2:variablename} : ${3:array|collection}) {
 }
 endsnippet
 
-snippet println "println() method" 
+snippet println "println() method" b
 System.out.println(${VISUAL}${1:content});
+endsnippet
+
+snippet print "print() method" b
+System.out.print(${VISUAL}${1:content});
 endsnippet
 
 snippet try( "try block with resource" b
@@ -106,7 +140,15 @@ try (
 		${1:resource}
 	) {
 		${VISUAL} ${2:try block statements}
-} catch (${3:Exception} ${4:e}) {
-	${5:$4.printStackTrace();}
+}
+endsnippet
+
+snippet try(c "try block with resource and catch" b
+try (
+		${1:resource}
+	) {
+	${VISUAL} ${0:try block statements}
+} catch (${2:Exception} ${3:e}) {
+	${4:$4.printStackTrace();}
 }	
 endsnippet
